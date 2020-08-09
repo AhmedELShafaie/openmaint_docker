@@ -37,6 +37,7 @@ RUN set -x \
 	&& unzip openmaint.war -d openmaint \
 	&& mv openmaint.war $CATALINA_HOME/webapps/openmaint.war \
 	&& mv openmaint/* $CATALINA_HOME/webapps/openmaint/ \
+	&& cp $CATALINA_HOME/webapps/openmaint/cmdbuild.sh $CATALINA_HOME/webapps/openmaint/openmaint.sh \
 	&& chmod 777 $CATALINA_HOME/webapps/openmaint/openmaint.sh \
 	&& chown tomcat -R $CATALINA_HOME \
 	&& cd /tmp \
